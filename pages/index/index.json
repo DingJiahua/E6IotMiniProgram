@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "date_selecter": "/component/date_selecter/date_selecter"
+  }
+}

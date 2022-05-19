@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view class="btn-area">
+    <button type="primary" bindtap="readData">提取数据上传</button>
+  </view>
+  <date_selecter id="modal" cancelText="取消" confirmText="确认" bind:cancelEvent="_cancelEvent"
+    bind:confirmEvent="_confirmEvent">
+
+  </date_selecter>
+</view>
