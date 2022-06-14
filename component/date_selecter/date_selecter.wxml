@@ -14,7 +14,7 @@
       <picker mode="date" value="{{startDate}}" start="2021-10-01" end="2050-01-01" bindchange="startDateChange">
         <view class="modal-picker">{{startDate}}</view>
       </picker>
-      <picker mode="time" value="{{startTime}}" start="00:01" end="23:59" bindchange="startTimeChange">
+      <picker mode="time" value="{{startTime}}" start="00:00" end="23:59" bindchange="startTimeChange">
         <view class="modal-picker">{{startTime}}</view>
       </picker>
     </view>
@@ -27,7 +27,7 @@
       <picker mode="date" value="{{endDate}}" start="2021-10-01" end="2050-01-01" bindchange="endDateChange">
         <view class="modal-picker">{{endDate}}</view>
       </picker>
-      <picker mode="time" value="{{endTime}}" start="00:01" end="23:59" bindchange="endTimeChange">
+      <picker mode="time" value="{{endTime}}" start="00:00" end="23:59" bindchange="endTimeChange">
         <view class="modal-picker">{{endTime}}</view>
       </picker>
     </view>

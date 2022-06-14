@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dialog_pwd_input": "/component/dialog_pwd_input/dialog_pwd_input"
+  }
+}

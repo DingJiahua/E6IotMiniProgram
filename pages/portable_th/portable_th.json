@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "date_selecter": "/component/date_selecter/date_selecter",
+    "dialog_pth_param": "/component/dialog_pth_param/dialog_pth_param",
+    "dialog_progress": "/component/dialog_progress/dialog_progress",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarTitleText": "便携温湿度仪"
+}

@@ -1,0 +1,19 @@
+var getDeviceType = function (serviceUuid) {
+  if (contains(serviceUuid, "0000FFA0-0000-1000-8000-00805F9B34FB")) {
+    return '安芯'
+  } else if (contains(serviceUuid, "6C228FCE-4F7F-7528-6613-6D4175359501")) {
+    return 'LORA温签'
+  } else if (contains(serviceUuid, "00003000-0000-1000-8000-00805F9B34FB")) {
+    return '便携温湿度仪'
+  }
+}
+
+function contains(arr, val) {
+  return arr.some(function (arrVal) {
+    return val === arrVal;
+  });
+}
+
+module.exports = {
+  getDeviceType: getDeviceType,
+}

@@ -1,0 +1,16 @@
+<!--component/dialog_progress/dialog_progress.wxml-->
+<view animation="{{animationData}}" hidden="{{!isShow}}" class='modal'>
+
+  <view data-type="mask" class='modal-mask'></view>
+
+  <view class='modal-layer  modal-layer-radius {{modalSize == "sm" ? " modal-layer-sm" : " modal-layer-md" }} '>
+
+    <view class="modal-item">
+      <text class="modal-body">正在升级设备</text>
+    </view>
+    <view class="progress-box">
+      <progress percent="{{progress}}" stroke-width="8" />
+    </view>
+
+  </view>
+</view>

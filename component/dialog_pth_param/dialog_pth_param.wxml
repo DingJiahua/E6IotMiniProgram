@@ -1,0 +1,59 @@
+<!--component/dialog_pth_param/dialog_pth_param.wxml-->
+<view animation="{{animationData}}" hidden="{{!isShow}}" class='modal'>
+
+<view data-type="mask" catchtap='hideModal' class='modal-mask'></view>
+
+<view class='modal-layer  modal-layer-radius {{modalSize == "sm" ? " modal-layer-sm" : " modal-layer-md" }} '>
+
+  <!-- 头部 -->
+  <view class='modal-header'>
+    <text>{{title}}</text>
+  </view>
+
+  <view class="modal-item">
+    <text class="modal-body">中心识别码</text>
+    <button catchtap="bindModifyId" size="mini" type="primary" bindtap="modify">修改</button>
+    <button catchtap="readLocalConfig" size="mini" type="primary" bindtap="modify">读取配置</button>
+  </view>
+
+  <dialog_pwd_input id="pwd_modal" cancelText="取消" confirmText="确认" bind:cancelEvent="_cancelEvent"
+  bind:confirmEvent="_confirmEvent"/>
+
+  <input class="modal-edit" bindinput="getDeviceId" type="number" maxlength="11" disabled="{{!isDisabled}}" focus="{{isDisabled}}" value="{{deviceId}}"/>
+
+  <view class="modal-item">
+    <text class="modal-body">IP地址</text>
+    <input bindinput="getIpAddress" class="modal-edit-right" type="text" disabled="{{!isDisabled}}" value="{{ipAddress}}"/>
+  </view>
+
+  <view class="modal-item">
+    <text class="modal-body">域名</text>
+    <input bindinput="getDomain" class="modal-edit-right" type="text" disabled="{{!isDisabled}}" value="{{domain}}"/>
+  </view>
+
+  <view class="modal-item">
+    <text class="modal-body">WIFI名称</text>
+    <input bindinput="getWifiSsid" class="modal-edit-right" type="text" value="{{wifiSsid}}"/>
+  </view>
+
+  <view class="modal-item">
+    <text class="modal-body">WIFI密码</text>
+    <input bindinput="getWifiPwd" class="modal-edit-right" type="text" value="{{wifiPwd}}"/>
+  </view>
+
+  <view class="modal-item">
+    <text class="modal-body">工作温度下限</text>
+    <input bindinput="getLowTemp" class="modal-edit-right" type="text" value="{{lowTemp}}"/>
+  </view>
+
+  <view class="modal-item">
+    <text class="modal-body">工作温度上限</text>
+    <input bindinput="getHighTemp" class="modal-edit-right" type="text" value="{{highTemp}}"/>
+  </view>
+  
+  <view class='modal-footer'>
+    <text catchtap='_cancelModal' class='btn btn-default'>{{cancelText}}</text>
+    <text catchtap='_confirmModal' class='btn btn-primary'>{{confirmText}}</text>
+  </view>
+</view>
+</view>

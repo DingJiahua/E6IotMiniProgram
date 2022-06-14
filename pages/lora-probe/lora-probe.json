@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "dialog_config": "/component/dialog_config/dialog_config",
+    "dialog_progress": "/component/dialog_progress/dialog_progress",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarTitleText": "Lora温签"
+}

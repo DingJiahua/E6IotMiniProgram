@@ -1,0 +1,18 @@
+<!--component/dialog_pwd_input/dialog_pwd_input.wxml-->
+<view animation="{{animationData}}" hidden="{{!isShow}}" class='modal'>
+
+<view data-type="mask" catchtap='hideModal' class='modal-mask'></view>
+
+<view class='modal-layer  modal-layer-radius {{modalSize == "sm" ? " modal-layer-sm" : " modal-layer-md" }} '>
+
+  <view class="modal-item">
+    <text class="modal-body">请输入密码</text>
+  </view>
+  <input class="modal-edit" bindinput="onPasswordInput" type="number" maxlength="6"/>
+  
+  <view class='modal-footer'>
+    <text catchtap='cancelModal' class='btn btn-default'>{{cancelText}}</text>
+    <text catchtap='confirmModal' class='btn btn-primary'>{{confirmText}}</text>
+  </view>
+</view>
+</view>

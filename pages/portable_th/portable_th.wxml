@@ -1,0 +1,25 @@
+<!--pages/portable_th/portable_th.wxml-->
+<view class="container">
+  <view class="btn-area">
+    <button type="primary" bindtap="queryHistoryData">数据补传</button>
+  </view>
+
+  <date_selecter id="modal" cancelText="取消" confirmText="确认" bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
+
+  </date_selecter>
+
+  <view class="btn-area">
+    <button type="primary" bindtap="configParam">参数设置</button>
+  </view>
+
+  <dialog_pth_param id="param_modal" title="参数配置" cancelText="取消" confirmText="确认" bind:cancelEvent="_cancelEvent" bind:confirmEvent="_paramConfirmEvent" deviceId="{{deviceId}}" wifiSsid="{{wifiSsid}}" wifiPwd="{{wifiPwd}}" lowTemp="{{lowTemp}}" highTemp="{{highTemp}}" ipAddress="{{ipAddress}}" domain="{{domain}}">
+
+  </dialog_pth_param>
+
+  <view class="btn-area">
+    <button type="primary" bindtap="showUpgradeDialog">设备升级</button>
+  </view>
+  <van-dialog id="upgrade-dialog"/>
+  <dialog_progress id="progress_modal" progress="{{otaProgress}}">
+  </dialog_progress>
+</view>
